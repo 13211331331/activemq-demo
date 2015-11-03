@@ -58,6 +58,7 @@ public class MessageSender {
             // 创建消息制作者
             MessageProducer producer = session.createProducer(destination);
             // 设置持久化模式
+
             producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
             sendMessage(session, producer);
             // 提交会话
